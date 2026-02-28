@@ -1,0 +1,718 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      // Default Dark Mode: Cek localStorage, jika bukan 'light', paksa jadi 'dark'
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark"); // Set default di memori
+      }
+    </script>
+    <script type="module" crossorigin src="/myportofolio-vite/assets/index-CsRymbRC.js"></script>
+    <link rel="stylesheet" crossorigin href="/myportofolio-vite/assets/index-NqMaHjHe.css">
+  </head>
+  <!-- H-SCREEN NANTI DIGANTI H-FULL -->
+  <body
+    class="h-900 w-full bg-white dark:bg-my-gradient text-black dark:text-white transition-colors duration-500 font-serif"
+  >
+    <!-- Navbar Start -->
+    <nav
+      id="navbar"
+      class="navbar fixed z-50 border-b border-black dark:border-white transition-transform duration-300 ease-in-out px-5 lg:px-8 xxl:px-12 3xl:px-16 py-0 md:py-1 lg:py-2 xxl:py-4 3xl:py-7 bg-white dark:bg-black text-black dark:text-white"
+    >
+      <div class="navbar-start">
+        <label
+          class="swap swap-rotate md:scale-110 lg:scale-120 xxl:scale-130 3xl:scale-170 hover:opacity-50 transition-opacity duration-500"
+        >
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" id="theme-toggle" class="theme-controller" />
+
+          <!-- moon icon -->
+          <svg
+            class="swap-off h-6 w-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+            />
+          </svg>
+
+          <!-- sun icon -->
+          <svg
+            class="swap-on h-6 w-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+            />
+          </svg>
+        </label>
+      </div>
+      <div class="navbar-center">
+        <a
+          href="#"
+          class="cursor-context-menu text-2xl md:text-3xl xl:text-4xl 3xl:text-5xl font-semibold italic"
+          >rmaliditia</a
+        >
+      </div>
+      <div class="navbar-end">
+        <button
+          id="btn-open-menu"
+          class="cursor-pointer hover:opacity-50 transition-opacity duration-500 md:scale-110 lg:scale-120 xxl:scale-130 3xl:scale-170"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu"
+          >
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Sidebar Start -->
+    <div
+      id="menu-overlay"
+      class="fixed inset-0 bg-black/20 dark:bg-black/60 backdrop-blur-sm z-60 invisible opacity-0"
+    ></div>
+
+    <div
+      id="fullscreen-menu"
+      class="fixed inset-y-0 right-0 w-full sm:w-[60%] z-70 flex flex-col pointer-events-none"
+    >
+      <svg
+        class="absolute inset-0 w-full h-full pointer-events-none"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          id="menu-path"
+          class="fill-black dark:fill-white"
+          vector-effect="non-scaling-stroke"
+          d="M 100 0 L 100 100 L 100 100 Q 100 50 100 0 Z"
+        />
+      </svg>
+
+      <div
+        id="menu-content"
+        class="relative z-10 flex flex-col h-full w-full opacity-0 invisible pointer-events-auto pt-8 pb-10"
+      >
+        <div class="px-8 flex justify-end">
+          <button
+            id="btn-close-menu"
+            class="p-2 text-white dark:text-black hover:text-red-500 menu-item transition-colors cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <ul
+          class="flex flex-col gap-8 md:gap-6 xl:gap-8 2xl:gap-20 px-12 lg:px-16 xxl:px-18 mt-10 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl font-serif font-black italic text-white dark:text-black"
+        >
+          <li class="menu-item overflow-hidden">
+            <a
+              href="#home"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Home</a
+            >
+          </li>
+          <li class="menu-item overflow-hidden">
+            <a
+              href="#about"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >About</a
+            >
+          </li>
+          <li class="menu-item overflow-hidden">
+            <a
+              href="#skills"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Skills</a
+            >
+          </li>
+          <li class="menu-item overflow-hidden">
+            <a
+              href="#projects"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Projects</a
+            >
+          </li>
+
+          <li class="menu-item overflow-hidden">
+            <a
+              href="#article"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Article</a
+            >
+          </li>
+          <li class="menu-item overflow-hidden">
+            <a
+              href="#contact"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <ul
+          class="mt-15 flex flex-row flex-wrap gap-2 md:gap-4 lg:gap-5 xxl:gap-6 px-12 lg:px-16 xxl:px-18 text-xs md:text-sm lg:text-md xxl:text-2xl font-sans font-medium italic text-white/60 dark:text-black/60"
+        >
+          <li class="menu-item overflow-hidden">
+            <a
+              href="https://www.instagram.com/rmaliditia_/"
+              target="_blank"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Instagram</a
+            >
+          </li>
+          <li class="menu-item overflow-hidden"><span>/</span></li>
+          <li class="menu-item overflow-hidden">
+            <a
+              href="https://www.tiktok.com/@grafizaly?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Tiktok</a
+            >
+          </li>
+          <li class="menu-item overflow-hidden"><span>/</span></li>
+          <li class="menu-item overflow-hidden">
+            <a
+              href="https://github.com/rmaliditia"
+              target="_blank"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >Github</a
+            >
+          </li>
+          <li class="menu-item overflow-hidden"><span>/</span></li>
+          <li class="menu-item overflow-hidden">
+            <a
+              href="https://www.linkedin.com/in/reiza-mohamad-aliditia-1a523233b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              class="hover:text-gray-400 transition-colors inline-block"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Home Start -->
+
+    <!-- LANJUTIN HOME SECTION BUAT UKURAN 1280 PX -->
+    <!-- LANJUTIN HOME SECTION BUAT UKURAN 1280 PX -->
+    <!-- LANJUTIN HOME SECTION BUAT UKURAN 1280 PX -->
+    <!-- LANJUTIN HOME SECTION BUAT UKURAN 1280 PX -->
+    <!-- LANJUTIN HOME SECTION BUAT UKURAN 1280 PX -->
+    <section
+      id="#"
+      class="mx-auto border-y border-white w-full max-w-384 min-h-fit lg:h-screen flex flex-col justify-start lg:justify-center items-center px-7 sm:px-10 lg:px-14 xl:px-22 pt-25 sm:pt-30 lg:pt-8"
+    >
+      <div
+        class="w-full flex flex-col items-center gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[80px] font-serif text-black dark:text-white"
+      >
+        <div
+          class="flex flex-wrap justify-center items-center gap-2 lg:gap-4 group cursor-pointer"
+        >
+          <span class="font-medium">I'm</span>
+          <span
+            class="italic font-semibold transition-opacity duration-500 group-hover:opacity-50"
+            >Reiza</span
+          >
+          <img
+            src="/myportofolio-vite/img/duduk.svg"
+            class="w-12 h-8 sm:w-13 sm:h-9 md:w-15 md:h-11 lg:w-17 lg:h-12 xl:w-19 xl:h-14 2xl:w-21 2xl:h-15 rounded-lg border lg:border-2 border-white object-cover transition-transform duration-500 group-hover:scale-115 group-hover:-rotate-2"
+            alt="Reiza"
+          />
+        </div>
+
+        <div
+          class="flex flex-wrap justify-center items-center align-middle gap-2 lg:gap-4 group cursor-pointer"
+        >
+          <span class="font-medium">a Web</span>
+          <img
+            src="/myportofolio-vite/img/web.svg"
+            class="w-11 h-8 sm:w-13 sm:h-9 md:w-15 md:h-11 lg:w-17 lg:h-12 xl:w-19 xl:h-14 2xl:w-21 2xl:h-15 rounded-lg object-cover border lg:border-2 border-white transition-transform duration-500 group-hover:scale-115 group-hover:rotate-2"
+            alt="Web Dev"
+          />
+          <span
+            class="italic font-bold transition-opacity duration-500 group-hover:opacity-50"
+            >Developer</span
+          >
+        </div>
+
+        <div
+          class="flex flex-wrap justify-center items-center gap-2 lg:gap-4 group cursor-pointer"
+        >
+          <span class="font-medium">and a Graphic</span>
+          <img
+            src="/myportofolio-vite/img/designer.svg"
+            class="w-11 h-8 sm:w-13 sm:h-9 md:w-15 md:h-11 lg:w-17 lg:h-12 xl:w-19 xl:h-14 2xl:w-21 2xl:h-15 rounded-lg object-cover border lg:border-2 border-white transition-transform duration-500 group-hover:scale-115 group-hover:-rotate-2"
+            alt="Graphic Design"
+          />
+          <span
+            class="italic font-semibold transition-opacity duration-500 group-hover:opacity-50"
+            >Designer</span
+          >
+        </div>
+
+        <div
+          class="flex flex-wrap justify-center items-center gap-2 lg:gap-4 group cursor-pointer"
+        >
+          <span class="font-medium">based in </span>
+          <span
+            class="italic font-semibold transition-opacity duration-500 group-hover:opacity-50"
+            >Bandung</span
+          >
+          <img
+            src="/myportofolio-vite/img/bandung.svg"
+            class="w-11 h-8 sm:w-13 sm:h-9 md:w-15 md:h-11 lg:w-17 lg:h-12 xl:w-19 xl:h-14 2xl:w-21 2xl:h-15 rounded-lg object-cover border lg:border-2 border-white transition-transform duration-500 group-hover:scale-115 group-hover:rotate-2"
+            alt="Bandung"
+          />
+        </div>
+      </div>
+
+      <p
+        class="my-6 md:my-8 text-center max-w-fit sm:max-w-md md:max-w-lg xl:max-w-2xl text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans text-black/60 dark:text-white/60 leading-relaxed tracking-wider"
+      >
+        Specializing in bridging the gap between backend logic and frontend
+        design. I transform complex ideas into seamless, user-centric digital
+        experiences that are powerful and beautiful.
+      </p>
+
+      <div class="flex gap-4 font-serif italic">
+        <button
+          class="relative inline-block font-bold text-sm md:text-base xl:text-xl 2xl:text-2xl px-4 py-2 text-center tracking-wide text-black dark:text-white bg-transparent border-2 border-black dark:border-white rounded-xl transition-all duration-500 ease-out shadow-[inset_0_0_0_0_#000000] dark:shadow-[inset_0_0_0_0_#ffffff] hover:text-white dark:hover:text-black hover:shadow-[inset_0_-100px_0_0_#000000] dark:hover:shadow-[inset_0_-100px_0_0_#ffffff] active:scale-90 cursor-pointer"
+        >
+          Let's Talk
+        </button>
+
+        <button
+          class="relative inline-block font-bold text-sm md:text-base xl:text-xl 2xl:text-2xl px-4 py-2 text-center tracking-wide text-black dark:text-white bg-transparent border-2 border-black dark:border-white rounded-xl transition-all duration-500 ease-out shadow-[inset_0_0_0_0_#000000] dark:shadow-[inset_0_0_0_0_#ffffff] hover:text-white dark:hover:text-black hover:shadow-[inset_0_-100px_0_0_#000000] dark:hover:shadow-[inset_0_-100px_0_0_#ffffff] active:scale-90 cursor-pointer"
+        >
+          Download CV
+        </button>
+      </div>
+    </section>
+    <!-- Home End -->
+
+    <!-- About Start -->
+    <section
+      id="about"
+      class="mx-auto w-full border pt-[10%] lg:pt-[5%] border-white flex flex-col max-w-384 gap-4 sm:gap-5 lg:gap-7 px-7 sm:px-10 lg:px-14 xl:px-22"
+    >
+      <h4
+        class="flex items-center font-mono font-bold opacity-50 tracking-wider gap-2 text-black dark:text-white justify-start text-xs sm:text-sm md:text-base"
+      >
+        <span>[ ABOUT ME ]</span>
+        <div class="w-4 h-4 sm:w-5 sm:h-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-down w-full h-full"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
+        </div>
+      </h4>
+      <div
+        class="w-full h-fit min-h-fit flex flex-col lg:flex-row items-center gap-4 lg:gap-10"
+      >
+        <img
+          src="/myportofolio-vite/img/duduk.svg"
+          class="w-full h-40 sm:h-70 xl:h-90 xxl:h-100 rounded-lg border lg:border-2 border-white object-cover"
+          alt="Reiza"
+        />
+        <div class="flex flex-col gap-4">
+          <h2
+            class="text-2xl/9 sm:text-4xl/11 xl:text-5xl/14 xxl:text-6xl/16 md:w-xl xl:w-full font-medium text-black dark:text-white"
+          >
+            Bridging the gap between Logic and Aesthetics.
+          </h2>
+          <p
+            class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed pl-3 border-l-2 border-black/80 dark:border-white/80 text-black/60 dark:text-white/60 flex flex-col gap-2 md:gap-3"
+          >
+            <span>
+              As an Informatics Engineering student at Universitas Pasundan, I
+              combine technical expertise in PHP/MySQL and JavaScript with a
+              keen eye for Graphic Design.
+            </span>
+            <span>
+              My goal is simple: to not just write code, but to craft digital
+              experiences. From robust databases to engaging visual identities.
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Skill Start -->
+    <section
+      id="about"
+      class="mx-auto w-full border pt-[10%] lg:pt-[5%] border-white flex flex-col max-w-384 gap-10 px-7 sm:px-10 lg:px-14 xl:px-22"
+    >
+      <div class="flex flex-col max-w-384 gap-4 sm:gap-5 lg:gap-7">
+        <h4
+          class="flex items-center font-mono font-bold opacity-50 tracking-wider gap-2 text-black dark:text-white justify-start text-xs sm:text-sm md:text-base"
+        >
+          <span>[ CAPABILITIES ]</span>
+          <div class="w-4 h-4 sm:w-5 sm:h-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-down w-full h-full"
+            >
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </div>
+        </h4>
+        <div>
+          <h2
+            class="text-2xl/9 sm:text-4xl/11 xl:text-5xl/14 xxl:text-6xl/16 md:w-xl xl:w-full font-medium text-black dark:text-white"
+          >
+            What I Bring to the Table
+          </h2>
+          <p
+            class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+          >
+            Delivering digital solutions through structured code and
+            human-centric design.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 xl:gap-5 gap-4"
+        >
+          <div
+            class="p-4 lg:p-5 xxl:p-7 w-full h-fit rounded-lg flex flex-col gap-1 border-2 border-black dark:border-white"
+          >
+            <div
+              class="w-6 h-6 mb-1 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-layers-icon lucide-layers size-full"
+              >
+                <path
+                  d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"
+                />
+                <path
+                  d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"
+                />
+                <path
+                  d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-semibold text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl"
+            >
+              Full Stack Development
+            </h3>
+            <p
+              class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+            >
+              Handling both client-side and server-side development for seamless
+              web performance.
+            </p>
+          </div>
+          <div
+            class="p-4 lg:p-5 xxl:p-7 w-full h-fit rounded-lg flex flex-col gap-1 border-2 border-black dark:border-white"
+          >
+            <div
+              class="w-6 h-6 mb-1 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-database-zap-icon lucide-database-zap"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5V19A9 3 0 0 0 15 21.84" />
+                <path d="M21 5V8" />
+                <path d="M21 12L18 17H22L19 22" />
+                <path d="M3 12A9 3 0 0 0 14.59 14.87" />
+              </svg>
+            </div>
+            <h3
+              class="font-semibold text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl"
+            >
+              Database Management
+            </h3>
+            <p
+              class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+            >
+              Designing efficient database structures (MySQL) to ensure data
+              integrity and speed.
+            </p>
+          </div>
+          <div
+            class="p-4 lg:p-5 xxl:p-7 w-full h-fit rounded-lg flex flex-col gap-1 border-2 border-black dark:border-white"
+          >
+            <div
+              class="w-6 h-6 mb-1 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-tablet-smartphone-icon lucide-tablet-smartphone"
+              >
+                <rect width="10" height="14" x="3" y="8" rx="2" />
+                <path
+                  d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4"
+                />
+                <path d="M8 18h.01" />
+              </svg>
+            </div>
+            <h3
+              class="font-semibold text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl"
+            >
+              Responsive Layouts
+            </h3>
+            <p
+              class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+            >
+              Ensuring websites look perfect on all screen sizes, from mobile
+              phones to desktops.
+            </p>
+          </div>
+          <div
+            class="p-4 lg:p-5 xxl:p-7 w-full h-fit rounded-lg flex flex-col gap-1 border-2 border-black dark:border-white"
+          >
+            <div
+              class="w-6 h-6 mb-1 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-tag-icon lucide-tag"
+              >
+                <path
+                  d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"
+                />
+                <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+              </svg>
+            </div>
+            <h3
+              class="font-semibold text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl"
+            >
+              Logo & Branding
+            </h3>
+            <p
+              class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+            >
+              Crafting unique visual identities that make brands stand out
+              authentically everywhere.
+            </p>
+          </div>
+          <div
+            class="p-4 lg:p-5 xxl:p-7 w-full h-fit rounded-lg flex flex-col gap-1 border-2 border-black dark:border-white"
+          >
+            <div
+              class="w-6 h-6 mb-1 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-pen-tool-icon lucide-pen-tool"
+              >
+                <path
+                  d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"
+                />
+                <path
+                  d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"
+                />
+                <path d="m2.3 2.3 7.286 7.286" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+            </div>
+            <h3
+              class="font-semibold text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl"
+            >
+              Digital Illustration
+            </h3>
+            <p
+              class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+            >
+              Creating custom vector graphics and illustrations for various
+              digital media needs.
+            </p>
+          </div>
+          <div
+            class="p-4 lg:p-5 xxl:p-7 w-full h-fit rounded-lg flex flex-col gap-1 border-2 border-black dark:border-white"
+          >
+            <div
+              class="w-6 h-6 mb-1 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-printer-icon lucide-printer"
+              >
+                <path
+                  d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+                />
+                <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" />
+                <rect x="6" y="14" width="12" height="8" rx="1" />
+              </svg>
+            </div>
+            <h3
+              class="font-semibold text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl"
+            >
+              Print & Layout Design
+            </h3>
+            <p
+              class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+            >
+              Designing professional layouts for merchandise, banners, and print
+              materials.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col max-w-384 gap-4 sm:gap-5 lg:gap-7">
+        <h4
+          class="flex items-center font-mono font-bold opacity-50 tracking-wider gap-2 text-black dark:text-white justify-start text-xs sm:text-sm md:text-base"
+        >
+          <span>[ TOOLSTACK ]</span>
+          <div class="w-4 h-4 sm:w-5 sm:h-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-down w-full h-full"
+            >
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </div>
+        </h4>
+        <div>
+          <h2
+            class="text-2xl/9 sm:text-4xl/11 xl:text-5xl/14 xxl:text-6xl/16 md:w-xl xl:w-full font-medium text-black dark:text-white"
+          >
+            Behind The Pixels
+          </h2>
+          <p
+            class="text-xs sm:text-sm md:text-[16px] lg:text-base xxl:text-xl font-sans tracking-wider leading-relaxed text-black/60 dark:text-white/60"
+          >
+            The code and creativity that happens behind every screen.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 xl:gap-5 gap-4"
+        >
+          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
+          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
+          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
+          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
+        </div>
+      </div>
+    </section>
+    <!-- Skill End -->
+
+    <!-- Project Start -->
+    <!-- Project End -->
+    <!-- Education Start -->
+    <!-- Education End -->
+    <!-- Article Start -->
+    <!-- Article End -->
+    <!-- Article Start -->
+    <!-- Article End -->
+    <!-- Contact Start -->
+    <!-- Contact End -->
+    <!-- Footer Start -->
+    <!-- Footer End -->
+  </body>
+</html>
