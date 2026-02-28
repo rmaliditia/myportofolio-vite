@@ -1,0 +1,1019 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body
+    class="backdrop-blur-xs h-[150rem] bg-linear-to-br from-black from-60% to-[#202020] to-90%"
+  >
+    <header
+      class="fixed top-4 left-0 right-0 z-50 flex justify-center w-full px-4"
+    >
+      <nav
+        class="navbar w-full max-w rounded-2xl justify-between border border-gray-100 px-4 flex items-center"
+      >
+        <!-- Color Mode (Position Start) Start  -->
+        <div class="navbar-start lg:hidden">
+          <label
+            class="btn btn-square border-0 bg-transparent rounded-lg swap swap-rotate shadow-none"
+          >
+            <input type="checkbox" id="mode-toggle" />
+            <svg
+              class="swap-on fill-current w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+              />
+            </svg>
+            <svg
+              class="swap-off fill-current w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+              />
+            </svg>
+          </label>
+        </div>
+        <!-- Color Mode (Position Start) End -->
+
+        <!-- Logo Start -->
+        <div
+          class="navbar-center items-center lg:navbar-start lg:w-auto lg:block"
+        >
+          <a
+            href="#home"
+            class="hidden sm:block text-2xl xl:text-3xl 3xl:text-5xl font-bold tracking-tighter text-white"
+            >reizamohamad.a</a
+          >
+          <a
+            href="#home"
+            class="text-xl sm:hidden xxl:text-2xl 3xl:text-4xl font-bold block text-white"
+            >rmaliditia</a
+          >
+        </div>
+        <!-- Logo End -->
+
+        <!-- Menu Horizontal Start -->
+        <div class="hidden lg:navbar-center lg:flex">
+          <ul
+            class="menu menu-horizontal px-1 3xl:py-8 font-normal text-[13px] xl:text-sm xxl:text-base 3xl:text-2xl 2xl:text-lg gap-0.5 xl:gap-1 xxl:gap-4"
+          >
+            <li>
+              <a href="#home" class="hover:text-app-accent transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-app-accent transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="hover:text-app-accent transition-colors"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#educations"
+                class="hover:text-app-accent transition-colors"
+                >Educations</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="hover:text-app-accent transition-colors"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#portofolio"
+                class="hover:text-app-accent transition-colors"
+                >Portofolio</a
+              >
+            </li>
+            <li>
+              <a href="#blog" class="hover:text-app-accent transition-colors"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-app-accent transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Menu Horizontal End -->
+
+        <!-- Menu Vertikal Start -->
+        <div class="navbar-end dropdown dropdown-end lg:hidden">
+          <button
+            id="hamburger-btn"
+            class="btn btn-square bg-transparent swap swap-rotate border-0 rounded-lg shadow-none text-white"
+          >
+            <svg
+              class="swap-off fill-current w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+              />
+            </svg>
+            <svg
+              class="swap-on fill-current w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 512 512"
+            >
+              <polygon
+                points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+              />
+            </svg>
+          </button>
+
+          <ul
+            id="mobile-menu"
+            class="menu menu-md bg-black dropdown-content mt-82 z-1 p-2 rounded-box w-45 hidden"
+          >
+            <li>
+              <a href="#home" class="text-white">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="text-white">About</a>
+            </li>
+            <li>
+              <a href="#skills" class="text-white">Skills</a>
+            </li>
+            <li>
+              <a href="#educations" class="text-white">Educations</a>
+            </li>
+            <li>
+              <a href="#experience" class="text-white">Experience</a>
+            </li>
+            <li>
+              <a href="#portofolio" class="text-white">Portofolio</a>
+            </li>
+            <li>
+              <a href="#blog" class="text-white">Blog</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Menu Vertikal End -->
+
+        <!-- Color Mode (Position End) Start  -->
+        <div class="hidden lg:block lg:navbar-end lg:w-auto">
+          <label
+            class="btn btn-square border-0 bg-transparent rounded-lg swap swap-rotate xxl:scale-120 3xl:scale-160 shadow-none"
+          >
+            <input type="checkbox" id="mode-toggle" />
+            <svg
+              class="swap-on fill-current w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+              />
+            </svg>
+            <svg
+              class="swap-off fill-current w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+              />
+            </svg>
+          </label>
+        </div>
+        <!-- Color Mode (Position End) End -->
+      </nav>
+    </header>
+
+    <section id="home" class="h-screen pt-28">
+      <div class="w-full grid items-center justify-center">
+        <img src="" class="w-3xs h-auto mask-b-from-20% mask-b-to-80%" alt="" />
+      </div>
+    </section>
+    <!-- <section class="py-24 bg-[#0B0B0F]">
+      <div class="container mx-auto px-6 mb-16 text-center md:text-left">
+        <h3 class="text-4xl md:text-5xl font-serif text-white mb-4">
+          The Ecosystem.
+        </h3>
+        <p class="text-gray-400 max-w-xl leading-relaxed text-lg">
+          A blend of technical power and creative precision. Here are the
+          technologies and tools behind my work.
+        </p>
+      </div>
+
+      <div class="container mx-auto px-6">
+        <div class="mb-12">
+          <div class="flex items-center gap-4 mb-6">
+            <h4 class="text-xl font-bold text-white">Development Stack</h4>
+            <div class="h-[1px] bg-gray-800 flex-1"></div>
+          </div>
+
+          <div
+            class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-6"
+          >
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-orange-500 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >HTML</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-blue-500 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >CSS</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-yellow-400 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >JavaScript</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-purple-500 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >PHP</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-blue-400 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >MySQL</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-cyan-400 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >Tailwind</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <h4 class="text-xl font-bold text-white">Creative Tools</h4>
+            <div class="h-[1px] bg-gray-800 flex-1"></div>
+          </div>
+
+          <div
+            class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-6"
+          >
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-pink-500 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >Figma</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-orange-600 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >Illustrator</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-blue-500 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >VS Code</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center p-6 bg-[#18181B] rounded-2xl border border-gray-800 hover:border-red-500 hover:bg-[#202022] transition-all duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform"
+              />
+              <span
+                class="text-xs text-gray-500 font-medium group-hover:text-white"
+                >Git</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="journey" class="py-24 bg-[#0B0B0F]">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="mb-20">
+          <h2 class="text-5xl md:text-7xl font-sans text-white mb-6">
+            The Journey.
+          </h2>
+          <p class="text-gray-400 text-lg font-serif leading-relaxed max-w-2xl">
+            Building the theoretical framework that grounds my creative work.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 border-t border-gray-800 pt-12 mb-20"
+        >
+          <div class="md:col-span-4 relative">
+            <div class="md:sticky md:top-24">
+              <span
+                class="text-xs font-mono text-gray-500 uppercase tracking-widest block mb-4"
+              >
+                01 / Academic
+              </span>
+              <h3 class="text-3xl font-serif text-white">Education</h3>
+            </div>
+          </div>
+
+          <div class="md:col-span-8 flex flex-col">
+            <div class="group border-b border-gray-800 pb-10 mb-10">
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2"
+              >
+                <div>
+                  <h4
+                    class="text-2xl font-serif text-white group-hover:text-blue-400 transition duration-300"
+                  >
+                    Pasundan University
+                  </h4>
+                  <span class="text-gray-400 font-light italic mt-1 block"
+                    >Informatics Engineering</span
+                  >
+                </div>
+                <span
+                  class="text-sm font-mono text-gray-600 bg-white/5 px-3 py-1 rounded-full whitespace-nowrap w-fit"
+                  >2024 - Present</span
+                >
+              </div>
+              <p class="text-gray-400 font-light leading-relaxed">
+                Deepening technical expertise in Software Engineering and
+                Network Infrastructure. Combining engineering logic with my
+                creative background to build complete digital solutions.
+              </p>
+            </div>
+
+            <div class="group border-b border-gray-800 pb-10">
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2"
+              >
+                <div>
+                  <h4
+                    class="text-2xl font-serif text-white group-hover:text-blue-400 transition duration-300"
+                  >
+                    SMK Bina Warga Bandung
+                  </h4>
+                  <span class="text-gray-400 font-light italic mt-1 block"
+                    >Multimedia</span
+                  >
+                </div>
+                <span
+                  class="text-sm font-mono text-gray-600 bg-white/5 px-3 py-1 rounded-full whitespace-nowrap w-fit"
+                  >2021 - 2024</span
+                >
+              </div>
+              <p class="text-gray-400 font-light leading-relaxed">
+                Laid the creative foundation in Multimedia. Mastered Graphic
+                Design and visual storytelling tools, which now give me a unique
+                edge in frontend development.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 border-t border-gray-800 pt-12"
+        >
+          <div class="md:col-span-4 relative">
+            <div class="md:sticky md:top-24">
+              <span
+                class="text-xs font-mono text-gray-500 uppercase tracking-widest block mb-4"
+              >
+                02 / Professional
+              </span>
+              <h3 class="text-3xl font-serif text-white">Certifications</h3>
+            </div>
+          </div>
+
+          <div class="md:col-span-8 flex flex-col">
+            <div class="group border-b border-gray-800 pb-10 mb-10">
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2"
+              >
+                <div>
+                  <h4
+                    class="text-2xl font-serif text-white group-hover:text-green-400 transition duration-300"
+                  >
+                    Responsive Web Design
+                  </h4>
+                  <span class="text-gray-400 font-light italic mt-1 block"
+                    >freeCodeCamp</span
+                  >
+                </div>
+                <span
+                  class="text-sm font-mono text-gray-600 bg-white/5 px-3 py-1 rounded-full whitespace-nowrap w-fit"
+                  >Issued Oct 2024</span
+                >
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-sm font-mono text-gray-500 hover:text-white transition mt-2"
+              >
+                Show Credential
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="group border-b border-gray-800 pb-10">
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2"
+              >
+                <div>
+                  <h4
+                    class="text-2xl font-serif text-white group-hover:text-green-400 transition duration-300"
+                  >
+                    Cisco CCNA: Intro to Networks
+                  </h4>
+                  <span class="text-gray-400 font-light italic mt-1 block"
+                    >Cisco Networking Academy</span
+                  >
+                </div>
+                <span
+                  class="text-sm font-mono text-gray-600 bg-white/5 px-3 py-1 rounded-full whitespace-nowrap w-fit"
+                  >Issued Jan 2025</span
+                >
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-sm font-mono text-gray-500 hover:text-white transition mt-2"
+              >
+                Show Credential
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem" class="py-24 bg-[#0B0B0F] relative overflow-hidden">
+      <div
+        class="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] -z-10"
+      ></div>
+      <div
+        class="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] -z-10"
+      ></div>
+
+      <div class="container mx-auto px-6 mb-16 text-center md:text-left">
+        <h3 class="text-4xl md:text-5xl font-serif text-white mb-4">
+          The Ecosystem.
+        </h3>
+        <p class="text-gray-400 max-w-xl leading-relaxed text-lg">
+          A curated arsenal of high-performance technologies and precision
+          design tools.
+        </p>
+      </div>
+
+      <div class="container mx-auto px-6">
+        <div class="mb-16">
+          <h4 class="text-xl font-bold text-white mb-8 flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+              />
+            </svg>
+            Development Core
+          </h4>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+              class="md:col-span-2 group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden flex items-center gap-6"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              ></div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                class="w-16 h-16 group-hover:scale-110 transition-transform z-10"
+              />
+              <div class="z-10">
+                <h5 class="text-white font-bold text-lg">PHP Native</h5>
+                <p class="text-gray-400 text-sm">
+                  Robust backend logic & server-side scripting.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="md:col-span-2 group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-yellow-400/50 transition-all duration-500 overflow-hidden flex items-center gap-6"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              ></div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                class="w-16 h-16 group-hover:scale-110 transition-transform z-10"
+              />
+              <div class="z-10">
+                <h5 class="text-white font-bold text-lg">JavaScript</h5>
+                <p class="text-gray-400 text-sm">
+                  Interactive frontend & dynamic functionalities.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-orange-500/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >HTML5</span
+              >
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >CSS3</span
+              >
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >MySQL</span
+              >
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-cyan-400/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >Tailwind</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xl font-bold text-white mb-8 flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-pink-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+              />
+            </svg>
+            Design & Workflow
+          </h4>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+              class="md:col-span-2 group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-pink-500/50 transition-all duration-500 overflow-hidden flex items-center gap-6"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              ></div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                class="w-16 h-16 group-hover:scale-110 transition-transform z-10"
+              />
+              <div class="z-10">
+                <h5 class="text-white font-bold text-lg">Figma</h5>
+                <p class="text-gray-400 text-sm">
+                  UI/UX prototyping & collaborative design.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-green-500/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/22/CorelDRAW_2020_Logo.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >CorelDRAW</span
+              >
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >VS Code</span
+              >
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-red-500/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >Git</span
+              >
+            </div>
+
+            <div
+              class="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-red-600/50 transition-all duration-500 flex flex-col items-center justify-center"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+                class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+              />
+              <span class="text-gray-400 font-medium group-hover:text-white"
+                >NPM</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-[#0B0B0F]">
+      <div class="container mx-auto px-6 mb-20">
+        <h3 class="text-4xl md:text-6xl font-serif text-white mb-4">
+          Behind The Pixels.
+        </h3>
+        <p class="text-gray-400 text-lg max-w-xl font-light">
+          The code and creativity that happens behind every screen.
+        </p>
+      </div>
+
+      <div class="container mx-auto px-6">
+        <div class="mb-20">
+          <h4
+            class="text-sm font-bold tracking-widest text-gray-500 uppercase mb-8"
+          >
+            // 01. Code & Architecture
+          </h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >01</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">HTML5</h5>
+                <p class="text-gray-400 italic font-serif">
+                  Structural Language
+                </p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >02</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">CSS3</h5>
+                <p class="text-gray-400 italic font-serif">Styling Language</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >03</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">JavaScript</h5>
+                <p class="text-gray-400 italic font-serif">Interactive Logic</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >04</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">PHP Native</h5>
+                <p class="text-gray-400 italic font-serif">
+                  Server-side Scripting
+                </p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >05</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">MySQL</h5>
+                <p class="text-gray-400 italic font-serif">
+                  Database Management
+                </p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >06</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">
+                  Tailwind CSS
+                </h5>
+                <p class="text-gray-400 italic font-serif">Utility Framework</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4
+            class="text-sm font-bold tracking-widest text-gray-500 uppercase mb-8"
+          >
+            // 02. Design & Workflow
+          </h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >01</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">Figma</h5>
+                <p class="text-gray-400 italic font-serif">UI/UX Design</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >02</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">CorelDRAW</h5>
+                <p class="text-gray-400 italic font-serif">Vector Graphics</p>
+              </div>
+              <svg
+                viewBox="0 0 24 24"
+                class="w-8 h-8 text-green-500 opacity-70 group-hover:opacity-100 transition"
+                fill="currentColor"
+              >
+                <path
+                  d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"
+                  fill-opacity="0.2"
+                />
+                <path
+                  d="M16.5 7.5L12 10 7.5 7.5 12 5l4.5 2.5zm0 9L12 14l-4.5 2.5L12 19l4.5-2.5zm-8-1l3.5-2V9.5l-3.5 2v2zm8 0v-2l-3.5-2v4l3.5 2z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >03</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">VS Code</h5>
+                <p class="text-gray-400 italic font-serif">Code Editor</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >04</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">Git</h5>
+                <p class="text-gray-400 italic font-serif">Version Control</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >05</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">GitHub</h5>
+                <p class="text-gray-400 italic font-serif">Repository</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                class="w-8 h-8 bg-white rounded-full opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+
+            <div
+              class="group border-t border-gray-800 py-8 flex justify-between items-start hover:bg-white/5 transition duration-500 px-4"
+            >
+              <div>
+                <span class="block text-xs text-gray-500 mb-2 font-mono"
+                  >06</span
+                >
+                <h5 class="text-2xl font-serif text-white mb-1">NPM</h5>
+                <p class="text-gray-400 italic font-serif">Package Manager</p>
+              </div>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

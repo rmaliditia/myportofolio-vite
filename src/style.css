@@ -1,0 +1,29 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* 1. Custom Colors */
+  --color-black: #1a1a1a;
+  --color-white: #f9fafb;
+  --background-image-my-gradient: linear-gradient(
+    -13deg,
+    #1e1e1e 45%,
+    #1a1a1a 90%
+  );
+
+  /* 2. Custom Breakpoints */
+  --breakpoint-xxl: 90rem;
+  --breakpoint-3xl: 120rem;
+
+  /* Untuk judul besar yang mewah */
+  --font-serif: "Cormorant", serif;
+  /* Untuk teks paragraf biasa */
+  --font-sans: "Google Sans", sans-serif;
+  /* Untuk label, angka, dan detail kodingan */
+  --font-mono: "Google Sans Mono", monospace;
+}
