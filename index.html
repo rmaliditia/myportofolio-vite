@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/src/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 
     <script>
       // Default Dark Mode: Cek localStorage, jika bukan 'light', paksa jadi 'dark'
@@ -90,7 +90,7 @@
     <!-- Sidebar Start -->
     <div
       id="menu-overlay"
-      class="fixed inset-0 bg-black/20 dark:bg-black/60 backdrop-blur-sm z-60 invisible opacity-0"
+      class="fixed h-screen inset-0 bg-black/20 dark:bg-black/60 backdrop-blur-sm z-60 invisible opacity-0"
     ></div>
 
     <div
@@ -137,7 +137,7 @@
         </div>
 
         <ul
-          class="flex flex-col gap-8 md:gap-6 xl:gap-8 2xl:gap-20 px-12 lg:px-16 xxl:px-18 mt-10 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl font-serif font-black italic text-white dark:text-black"
+          class="flex flex-col gap-8 md:gap-6 xl:gap-8 2xl:gap-20 3xl:gap-15 px-12 lg:px-16 xxl:px-18 mt-10 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl font-serif font-black italic text-white dark:text-black"
         >
           <li class="menu-item overflow-hidden">
             <a
@@ -236,7 +236,7 @@
     <!-- LANJUTIN HOME SECTION BUAT UKURAN 1280 PX -->
     <section
       id="#"
-      class="mx-auto border-y border-white w-full max-w-384 min-h-fit lg:h-screen flex flex-col justify-start lg:justify-center items-center px-7 sm:px-10 lg:px-14 xl:px-22 pt-25 sm:pt-30 lg:pt-8"
+      class="mx-auto w-full max-w-384 min-h-fit lg:h-screen flex flex-col justify-start lg:justify-center items-center px-7 sm:px-10 lg:px-14 xl:px-22 pt-25 sm:pt-30 lg:pt-8"
     >
       <div
         class="w-full flex flex-col items-center gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[80px] font-serif text-black dark:text-white"
@@ -329,7 +329,7 @@
     <!-- About Start -->
     <section
       id="about"
-      class="mx-auto w-full border pt-[10%] lg:pt-[5%] border-white flex flex-col max-w-384 gap-4 sm:gap-5 lg:gap-7 px-7 sm:px-10 lg:px-14 xl:px-22"
+      class="mx-auto w-full pt-[10%] lg:pt-[5%] flex flex-col max-w-384 gap-4 sm:gap-5 lg:gap-7 px-7 sm:px-10 lg:px-14 xl:px-22"
     >
       <h4
         class="flex items-center font-mono font-bold opacity-50 tracking-wider gap-2 text-black dark:text-white justify-start text-xs sm:text-sm md:text-base"
@@ -386,7 +386,7 @@
     <!-- Skill Start -->
     <section
       id="about"
-      class="mx-auto w-full border pt-[10%] lg:pt-[5%] border-white flex flex-col max-w-384 gap-10 px-7 sm:px-10 lg:px-14 xl:px-22"
+      class="mx-auto w-full pt-[10%] lg:pt-[5%] flex flex-col max-w-384 gap-10 px-7 sm:px-10 lg:px-14 xl:px-22"
     >
       <div class="flex flex-col max-w-384 gap-4 sm:gap-5 lg:gap-7">
         <h4
@@ -688,13 +688,802 @@
             The code and creativity that happens behind every screen.
           </p>
         </div>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 xl:gap-5 gap-4"
-        >
-          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
-          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
-          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
-          <!-- LANJUTIN DISINI UNTUK ISI NYA!! -->
+        <div class="flex flex-col w-full gap-12 lg:gap-16 mt-4 lg:mt-8">
+          <div class="flex flex-col gap-4 lg:gap-6">
+            <h3
+              class="flex items-center font-mono font-bold opacity-50 tracking-wider gap-2 text-black dark:text-white justify-start text-xs sm:text-sm md:text-base"
+            >
+              // 1. Code & Architecture
+            </h3>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-20 gap-y-0"
+            >
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >01</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    HTML
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Structural Language</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      fill="#e44d26"
+                      d="M14.021 90.034 6 0h88.187l-8.022 89.985L50.02 100"
+                    />
+                    <path
+                      fill="#f16529"
+                      d="M50.093 92.344V7.39h36.048l-6.88 76.811"
+                    />
+                    <path
+                      fill="#ebebeb"
+                      d="M22.383 18.4h27.71v11.036H34.488L35.51 40.74h14.584v11.01H25.397zm3.5 38.893h11.084l.778 8.823 12.348 3.306v11.521l-22.654-6.32"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M77.706 18.4H50.044v11.036h26.64zm-2.018 22.34H50.044v11.035h13.612l-1.288 14.341-12.324 3.306v11.473l22.606-6.271"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >02</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    CSS
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Styling Language</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      fill="#264de4"
+                      d="m94.175 0-8.033 89.99L50.034 100l-36.01-9.996L6 0z"
+                    />
+                    <path
+                      fill="#2965f1"
+                      d="m79.265 84.26 6.864-76.9H50.087v84.988z"
+                    />
+                    <path
+                      fill="#ebebeb"
+                      d="m24.396 40.74.99 11.039h24.702V40.74zm25.692-22.342h-27.68l1.003 11.038h26.676zm-.001 62.495V69.408l-.048.013-12.294-3.32-.786-8.803H25.878l1.547 17.332 22.612 6.277z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="m63.642 51.779-1.281 14.316-12.312 3.323v11.484l22.63-6.272.166-1.865 2.594-29.06.27-2.965L77.7 18.398H50.05v11.038h15.555L64.599 40.74H50.05v11.04z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >03</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Javascript
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Interactive Logic</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 rounded-md overflow-hidden"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <g clip-path="url(#a)">
+                      <path fill="#f7df1e" d="M100 0H0v100h100z" />
+                      <path
+                        fill="#000"
+                        d="M67.175 78.125c2.014 3.29 4.635 5.707 9.27 5.707 3.893 0 6.38-1.946 6.38-4.635 0-3.222-2.555-4.364-6.84-6.238l-2.35-1.008c-6.781-2.89-11.286-6.508-11.286-14.159 0-7.047 5.37-12.413 13.762-12.413 5.975 0 10.27 2.08 13.365 7.524l-7.317 4.699c-1.611-2.89-3.35-4.027-6.048-4.027-2.752 0-4.497 1.746-4.497 4.027 0 2.819 1.746 3.96 5.778 5.706l2.35 1.006c7.983 3.424 12.491 6.915 12.491 14.762 0 8.46-6.646 13.096-15.571 13.096-8.727 0-14.365-4.16-17.124-9.61zm-33.196.815c1.477 2.619 2.82 4.833 6.048 4.833 3.087 0 5.035-1.208 5.035-5.905V45.916h9.397v32.08c0 9.73-5.705 14.158-14.032 14.158-7.524 0-11.881-3.894-14.097-8.583z"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h100v100H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >04</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    PHP
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Server-side Scripting</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      fill="#6e81b6"
+                      fill-rule="evenodd"
+                      d="M50 75.677c27.614 0 50-11.345 50-25.338S77.614 25 50 25 0 36.345 0 50.339s22.386 25.338 50 25.338"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#fff"
+                      fill-rule="evenodd"
+                      d="m60.133 58.528 2.48-12.764c.56-2.881.095-5.03-1.382-6.388-1.431-1.314-3.86-1.953-7.427-1.953H49.51l1.229-6.324a.812.812 0 0 0-.798-.969h-5.928a.81.81 0 0 0-.798.659l-2.634 13.55c-.24-1.524-.83-2.835-1.774-3.916-1.74-1.99-4.49-3-8.176-3H19.14a.814.814 0 0 0-.798.658l-5.33 27.43a.81.81 0 0 0 .798.968h5.974c.39 0 .724-.276.798-.66l1.29-6.634h4.447c2.334 0 4.295-.252 5.826-.75 1.566-.51 3.006-1.373 4.276-2.562a13.1 13.1 0 0 0 2.526-3.136l-1.065 5.48a.81.81 0 0 0 .798.968h5.929c.39 0 .723-.276.798-.658l2.926-15.056H52.4c1.734 0 2.242.345 2.38.493.125.135.385.612.093 2.116l-2.358 12.136a.813.813 0 0 0 .798.968h6.023a.81.81 0 0 0 .797-.656M32.65 47.981c-.373 1.914-1.074 3.279-2.086 4.057-1.028.793-2.672 1.194-4.886 1.194h-2.649l1.915-9.854h3.424c2.515 0 3.529.538 3.936.988.564.625.683 1.876.346 3.615m52.455-7.558c-1.738-1.99-4.488-3-8.175-3H65.44a.81.81 0 0 0-.798.658l-5.33 27.43a.814.814 0 0 0 .797.968h5.975c.39 0 .724-.276.798-.66l1.29-6.634h4.448c2.335 0 4.294-.252 5.826-.75 1.565-.51 3.006-1.373 4.275-2.562a13.1 13.1 0 0 0 2.591-3.247 13.2 13.2 0 0 0 1.41-3.915c.679-3.495.135-6.283-1.617-8.288m-5.817 7.558c-.373 1.914-1.074 3.279-2.085 4.057-1.028.793-2.672 1.194-4.886 1.194h-2.65l1.915-9.854h3.424c2.516 0 3.529.538 3.937.988.562.625.683 1.876.345 3.615"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#000"
+                      fill-rule="evenodd"
+                      d="M28.197 42.565q3.405 0 4.54 1.257 1.133 1.258.54 4.315-.621 3.184-2.388 4.546-1.77 1.362-5.383 1.362h-3.635l2.231-11.48zm-14.559 23.1h5.975l1.418-7.291h5.118q3.387 0 5.575-.713 2.187-.712 3.977-2.386a12.2 12.2 0 0 0 2.431-3.045q.93-1.665 1.32-3.674.949-4.877-1.429-7.598t-7.563-2.721H18.97zm30.203-34.721h5.928l-1.417 7.293h5.282q4.984 0 6.876 1.738t1.135 5.634l-2.48 12.765h-6.023L55.5 46.237q.403-2.072-.296-2.825t-2.974-.753h-4.738l-3.054 15.715H38.51zm30.994 11.621q3.405 0 4.54 1.257 1.132 1.258.54 4.315-.619 3.184-2.388 4.546t-5.381 1.362h-3.635l2.23-11.48zm-14.56 23.1h5.976l1.417-7.291h5.118q3.389 0 5.575-.713 2.189-.712 3.978-2.386a12.2 12.2 0 0 0 2.43-3.045 12.3 12.3 0 0 0 1.322-3.674q.948-4.877-1.43-7.598t-7.563-2.721h-11.49z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >05</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    MySQL
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Database Management</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <g fill="#00546b" clip-path="url(#a)">
+                      <path
+                        d="M92.11 77.066c-5.44-.137-9.657.415-13.194 1.934-1.02.413-2.653.414-2.789 1.726.544.552.612 1.45 1.089 2.209.817 1.38 2.244 3.245 3.536 4.212 1.428 1.104 2.857 2.208 4.353 3.175 2.652 1.657 5.645 2.623 8.23 4.28 1.497.966 2.992 2.21 4.488 3.245.749.552 1.224 1.45 2.177 1.795v-.207c-.477-.622-.613-1.519-1.088-2.21-.68-.69-1.36-1.311-2.04-2.002-1.973-2.692-4.421-5.04-7.074-6.972-2.176-1.52-6.938-3.59-7.821-6.145 0 0-.069-.068-.136-.137 1.496-.138 3.264-.69 4.693-1.105 2.312-.622 4.42-.484 6.8-1.105 1.089-.276 2.177-.621 3.265-.967v-.62c-1.224-1.243-2.108-2.9-3.4-4.074-3.469-3.038-7.278-6.007-11.222-8.492-2.11-1.38-4.83-2.278-7.074-3.452-.816-.414-2.176-.621-2.652-1.312-1.225-1.518-1.905-3.52-2.789-5.315-1.972-3.798-3.877-8.009-5.577-12.013-1.224-2.692-1.972-5.385-3.469-7.87-7.005-11.737-14.622-18.848-26.32-25.82-2.517-1.45-5.51-2.072-8.706-2.83-1.7-.07-3.4-.208-5.1-.278-1.09-.483-2.178-1.794-3.13-2.416C13.284 1.815 3.286-3.57.43 3.541c-1.837 4.487 2.72 8.906 4.284 11.184 1.157 1.588 2.652 3.383 3.469 5.178.476 1.173.611 2.417 1.088 3.66 1.088 3.036 2.108 6.42 3.537 9.25.748 1.45 1.564 2.969 2.516 4.28.544.76 1.496 1.105 1.7 2.348-.951 1.38-1.02 3.452-1.564 5.178-2.449 7.801-1.496 17.466 1.972 23.196 1.088 1.726 3.673 5.524 7.142 4.074 3.06-1.243 2.38-5.178 3.264-8.63.205-.83.069-1.38.476-1.933v.138c.953 1.933 1.904 3.797 2.789 5.73 2.108 3.383 5.78 6.904 8.841 9.252 1.633 1.242 2.925 3.382 4.966 4.142v-.208h-.137c-.408-.621-1.02-.897-1.564-1.38-1.224-1.243-2.585-2.762-3.536-4.143-2.857-3.866-5.374-8.146-7.618-12.565-1.088-2.14-2.04-4.487-2.924-6.627-.409-.83-.409-2.072-1.089-2.485-1.02 1.518-2.516 2.83-3.264 4.694-1.292 2.968-1.428 6.627-1.904 10.424-.273.07-.137 0-.273.14-2.176-.554-2.924-2.832-3.74-4.765-2.041-4.901-2.381-12.772-.613-18.433.477-1.45 2.517-6.006 1.701-7.387-.408-1.312-1.769-2.071-2.517-3.107-.884-1.312-1.836-2.968-2.448-4.418-1.633-3.866-2.449-8.147-4.217-12.013-.816-1.795-2.244-3.659-3.4-5.316-1.293-1.864-2.721-3.176-3.741-5.385-.34-.759-.817-2.002-.272-2.83.136-.553.407-.76.952-.898.884-.76 3.4.207 4.284.621 2.517 1.035 4.625 2.003 6.734 3.452.952.69 1.972 2.003 3.196 2.348h1.429c2.176.483 4.624.138 6.665.759 3.605 1.173 6.87 2.9 9.794 4.764 8.91 5.73 16.255 13.876 21.22 23.61.816 1.588 1.156 3.039 1.904 4.695 1.429 3.383 3.197 6.835 4.625 10.149 1.428 3.244 2.788 6.559 4.829 9.251 1.02 1.45 5.1 2.21 6.937 2.969 1.36.62 3.47 1.174 4.693 1.933 2.312 1.449 4.625 3.107 6.801 4.694 1.089.829 4.489 2.555 4.693 3.935"
+                      />
+                      <path
+                        d="M22.737 17.072c-1.156 0-1.972.139-2.788.345v.138h.136c.544 1.105 1.496 1.865 2.176 2.831.544 1.104 1.02 2.21 1.565 3.314.067-.07.135-.138.135-.138.953-.69 1.429-1.795 1.429-3.452-.409-.483-.477-.966-.817-1.45-.407-.69-1.292-1.035-1.836-1.588"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h100v100H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >06</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Node.js
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >JavaScript Runtime</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      fill="#8cc84b"
+                      d="M46.279 1.067c2.479-1.42 5.709-1.426 8.186 0 12.464 7.042 24.931 14.074 37.393 21.12 2.343 1.321 3.911 3.93 3.887 6.63v42.371c.018 2.813-1.705 5.483-4.178 6.774-12.422 7.004-24.838 14.016-37.259 21.02-2.53 1.447-5.825 1.335-8.277-.23-3.724-2.16-7.455-4.308-11.18-6.465-.76-.453-1.619-.815-2.156-1.552.475-.64 1.324-.72 2.015-1 1.554-.495 2.982-1.288 4.41-2.058.361-.247.802-.153 1.148.069 3.185 1.826 6.342 3.705 9.537 5.513.682.394 1.372-.129 1.955-.453 12.19-6.89 24.396-13.754 36.584-20.646a1.21 1.21 0 0 0 .664-1.191c.009-13.977.002-27.957.005-41.934a1.31 1.31 0 0 0-.781-1.308C75.852 20.756 63.479 13.773 51.102 6.8a1.29 1.29 0 0 0-1.458-.002c-12.378 6.975-24.749 13.964-37.126 20.935-.506.23-.845.738-.785 1.302q.002 20.966 0 41.936a1.19 1.19 0 0 0 .673 1.176c3.303 1.873 6.61 3.733 9.916 5.6 1.861 1.002 4.148 1.597 6.199.83 1.81-.65 3.08-2.497 3.045-4.42.017-13.895-.009-27.793.013-41.686-.046-.617.54-1.127 1.14-1.069 1.586-.01 3.175-.021 4.762.005.663-.015 1.119.649 1.037 1.27-.007 13.984.017 27.968-.01 41.952.003 3.726-1.528 7.781-4.975 9.605-4.247 2.2-9.496 1.733-13.691-.376-3.632-1.813-7.098-3.952-10.666-5.894C6.697 76.68 4.983 73.999 5 71.189V28.817c-.026-2.756 1.604-5.412 4.021-6.713Q27.651 11.588 46.28 1.067"
+                    />
+                    <path
+                      fill="#8cc84b"
+                      d="M57.114 30.417c5.417-.348 11.216-.206 16.091 2.462 3.774 2.046 5.867 6.338 5.933 10.53-.105.566-.696.878-1.236.84-1.572-.003-3.144.02-4.716-.011-.667.025-1.054-.59-1.138-1.179-.451-2.006-1.545-3.993-3.434-4.96-2.898-1.452-6.26-1.38-9.42-1.349-2.308.123-4.79.322-6.744 1.68-1.5 1.027-1.957 3.102-1.421 4.773.505 1.2 1.89 1.587 3.023 1.944 6.529 1.708 13.447 1.538 19.85 3.785 2.651.916 5.245 2.697 6.152 5.472 1.187 3.72.667 8.168-1.98 11.154-2.146 2.458-5.273 3.796-8.39 4.522-4.149.925-8.454.949-12.666.538-3.962-.451-8.084-1.492-11.142-4.191-2.614-2.27-3.892-5.808-3.765-9.223.03-.576.605-.978 1.157-.93 1.583-.014 3.165-.018 4.748.001.632-.045 1.101.501 1.133 1.097.292 1.912 1.01 3.918 2.678 5.051 3.216 2.075 7.253 1.933 10.936 1.991 3.052-.135 6.477-.176 8.967-2.193 1.314-1.15 1.703-3.075 1.348-4.73-.384-1.398-1.847-2.05-3.103-2.476-6.444-2.038-13.44-1.299-19.822-3.604-2.59-.916-5.096-2.647-6.092-5.309-1.389-3.767-.752-8.427 2.172-11.313 2.852-2.87 6.968-3.976 10.881-4.372"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >07</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Next.js
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >React Framework</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <g clip-path="url(#a)">
+                      <path
+                        class="fill-black dark:fill-white"
+                        d="M50 99.999c27.614 0 50-22.386 50-50s-22.386-50-50-50-50 22.386-50 50 22.386 50 50 50"
+                      />
+                      <path
+                        fill="url(#b)"
+                        d="M83.06 87.51 38.412 30H30v39.983h6.73V38.545L77.777 91.58a50 50 0 0 0 5.283-4.07"
+                      />
+                      <path
+                        fill="url(#c)"
+                        d="M70.556 29.999h-6.667v40h6.667z"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="b"
+                        x1="60.556"
+                        x2="80.278"
+                        y1="64.721"
+                        y2="89.166"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop />
+                        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                      </linearGradient>
+                      <linearGradient
+                        id="c"
+                        x1="67.222"
+                        x2="67.111"
+                        y1="29.999"
+                        y2="59.374"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop />
+                        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                      </linearGradient>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h100v100H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >08</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Bootstrap
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >CSS Framework</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      fill="url(#boot-a)"
+                      d="M11.031 20.414C10.843 14.996 15.064 10 20.77 10h58.467c5.706 0 9.928 4.996 9.739 10.414-.181 5.205.054 11.946 1.75 17.443 1.703 5.514 4.573 9 9.274 9.448v5.078c-4.701.448-7.571 3.933-9.273 9.447-1.697 5.497-1.933 12.239-1.751 17.444.189 5.417-4.033 10.414-9.739 10.414H20.77c-5.706 0-9.927-4.997-9.738-10.414.18-5.205-.055-11.947-1.752-17.444-1.701-5.514-4.579-9-9.28-9.447v-5.078c4.701-.448 7.579-3.934 9.28-9.448 1.697-5.497 1.933-12.238 1.751-17.443"
+                    />
+                    <g filter="url(#boot-b)">
+                      <path
+                        fill="url(#boot-c)"
+                        d="M52.169 71.027c9.237 0 14.804-4.523 14.804-11.984 0-5.639-3.972-9.721-9.87-10.368v-.235c4.333-.705 7.734-4.728 7.734-9.222 0-6.403-5.056-10.574-12.759-10.574H34.746v42.383zM41.487 34.019h8.967c4.874 0 7.642 2.173 7.642 6.11 0 4.2-3.22 6.549-9.057 6.549h-7.552zm0 31.633V51.7h8.906c6.38 0 9.69 2.35 9.69 6.931 0 4.582-3.22 7.02-9.299 7.02z"
+                      />
+                      <path
+                        stroke="#fff"
+                        stroke-width=".195"
+                        d="M52.169 71.027c9.237 0 14.804-4.523 14.804-11.984 0-5.639-3.972-9.721-9.87-10.368v-.235c4.333-.705 7.734-4.728 7.734-9.222 0-6.403-5.056-10.574-12.759-10.574H34.746v42.383zM41.487 34.019h8.967c4.874 0 7.642 2.173 7.642 6.11 0 4.2-3.22 6.549-9.057 6.549h-7.552zm0 31.633V51.7h8.906c6.38 0 9.69 2.35 9.69 6.931 0 4.582-3.22 7.02-9.299 7.02z"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="boot-a"
+                        x1="14.859"
+                        x2="102.242"
+                        y1="12.109"
+                        y2="81.474"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#9013fe" />
+                        <stop offset="1" stop-color="#6610f2" />
+                      </linearGradient>
+                      <linearGradient
+                        id="boot-c"
+                        x1="37.795"
+                        x2="57.327"
+                        y1="31.434"
+                        y2="64.467"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#fff" />
+                        <stop offset="1" stop-color="#f1e5fc" />
+                      </linearGradient>
+                      <filter
+                        id="boot-b"
+                        width="38.672"
+                        height="48.828"
+                        x="31.524"
+                        y="26.203"
+                        color-interpolation-filters="sRGB"
+                        filterUnits="userSpaceOnUse"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          result="hardAlpha"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        />
+                        <feOffset dy=".781" />
+                        <feGaussianBlur stdDeviation="1.563" />
+                        <feColorMatrix
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                        />
+                        <feBlend
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_867_4912"
+                        />
+                        <feBlend
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_867_4912"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >09</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Tailwind CSS
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >CSS Framework</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <g clip-path="url(#a)">
+                      <path
+                        fill="#06b6d4"
+                        d="M50 20q-20 0-25 19.994 7.5-9.997 17.5-7.498c3.804.95 6.522 3.71 9.532 6.764 4.902 4.974 10.576 10.731 22.969 10.731q20 0 24.999-19.995-7.5 9.997-17.5 7.5c-3.803-.951-6.521-3.71-9.531-6.765C68.067 25.758 62.392 20 50 20M25 49.991q-20 0-25 19.995 7.5-9.998 17.5-7.498c3.803.952 6.522 3.71 9.532 6.763C31.933 74.225 37.608 79.984 50 79.984q20 0 25-19.995-7.5 9.997-17.5 7.498c-3.803-.95-6.522-3.71-9.532-6.763C43.066 55.75 37.393 49.991 25 49.991"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h100v100H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4 lg:gap-6 mt-4 md:mt-0">
+            <h3
+              class="font-mono text-sm md:text-base font-bold tracking-widest uppercase text-black dark:text-white"
+            >
+              // 2. Design & Workflow
+            </h3>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-20 gap-y-0"
+            >
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >01</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Figma
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >UI/UX Design</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <g clip-path="url(#a)">
+                      <path
+                        fill="#0acf83"
+                        d="M33.333 100C42.533 100 50 92.533 50 83.333V66.667H33.333c-9.2 0-16.666 7.466-16.666 16.666S24.133 100 33.333 100"
+                      />
+                      <path
+                        fill="#a259ff"
+                        d="M16.667 50c0-9.2 7.466-16.667 16.666-16.667H50v33.334H33.333c-9.2 0-16.666-7.467-16.666-16.667"
+                      />
+                      <path
+                        fill="#f24e1e"
+                        d="M16.667 16.667C16.667 7.467 24.133 0 33.333 0H50v33.333H33.333c-9.2 0-16.666-7.466-16.666-16.666"
+                      />
+                      <path
+                        fill="#ff7262"
+                        d="M50 0h16.667c9.2 0 16.666 7.467 16.666 16.667s-7.466 16.666-16.666 16.666H50z"
+                      />
+                      <path
+                        fill="#1abcfe"
+                        d="M83.333 50c0 9.2-7.466 16.667-16.666 16.667S50 59.2 50 50s7.467-16.667 16.667-16.667S83.333 40.8 83.333 50"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h100v100H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >02</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    CorelDRAW
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Vector Graphics</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain fill-black dark:fill-white"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.651 0C10.265.019 9.4.272 8.584.657c-.816.39-3.696 2.161-3.752 6.536.072 4.145 3.847 11.191 6.397 13.455 0 0-4.141-6.952-4.439-13.013C6.488 1.575 10.651 0 10.651 0Zm2.679 0s4.159 1.575 3.861 7.635c-.299 6.061-4.439 13.013-4.439 13.013 2.547-2.264 6.324-9.31 6.396-13.455-.057-4.375-2.936-6.146-3.752-6.536C14.58.272 13.715.019 13.33 0Zm-1.38.019a1.088 1.088 0 0 0-.555.144C9.864.99 8.909 3.982 9.177 8.66c.185 3.242 1.009 7.291 2.422 11.988h.7c1.413-4.697 2.24-8.742 2.425-11.984.268-4.677-.688-7.674-2.219-8.501a1.088 1.088 0 0 0-.555-.144ZM7.017 1.066S2.543 2.909 3.431 8.225c.884 5.32 5.588 10.995 6.986 12.2.503.457-5.777-6.548-6.386-12.699-.291-2.323.39-4.9 2.986-6.66Zm9.966 0c2.595 1.76 3.276 4.337 2.985 6.66-.608 6.151-6.888 13.156-6.386 12.699 1.398-1.205 6.103-6.88 6.987-12.2.888-5.316-3.586-7.159-3.586-7.159Zm-6.815 20.78L10.647 24h2.599l.488-2.154h-3.566Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >03</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Photoshop
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Raster Graphics</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 rounded-sm overflow-hidden"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      fill="#001e36"
+                      d="M17.708 1h64.584C92.083 1 100 8.917 100 18.708v62.084c0 9.791-7.917 17.708-17.708 17.708H17.708C7.917 98.5 0 90.583 0 80.792V18.708C0 8.917 7.917 1 17.708 1"
+                    />
+                    <path
+                      fill="#31a8ff"
+                      d="M22.5 69.375V26.5c0-.292.125-.458.417-.458.708 0 1.375 0 2.333-.042 1-.042 2.042-.042 3.167-.083 1.125-.042 2.333-.042 3.625-.084 1.291-.041 2.541-.041 3.791-.041 3.417 0 6.25.416 8.584 1.291 2.083.709 4 1.875 5.583 3.417a13.3 13.3 0 0 1 3.042 4.75A16 16 0 0 1 54 40.667q0 5.374-2.5 8.875c-1.667 2.333-4 4.083-6.708 5.083-2.834 1.042-5.959 1.417-9.375 1.417-1 0-1.667 0-2.084-.042-.416-.042-1-.042-1.791-.042v13.375c.041.292-.167.542-.459.584H23c-.333 0-.5-.167-.5-.542m9.083-35.292v14c.584.042 1.125.084 1.625.084h2.209c1.625 0 3.25-.25 4.791-.75 1.334-.375 2.5-1.167 3.417-2.209.875-1.041 1.292-2.458 1.292-4.291a6.86 6.86 0 0 0-.959-3.709c-.708-1.083-1.708-1.916-2.916-2.375-1.542-.625-3.209-.875-4.917-.833-1.083 0-2.042 0-2.833.042-.834-.042-1.417 0-1.709.041M80 45.542c-1.25-.667-2.583-1.125-4-1.417-1.542-.333-3.083-.542-4.667-.542-.833-.041-1.708.084-2.5.292-.541.125-1 .417-1.291.833-.209.334-.334.75-.334 1.125s.167.75.417 1.084c.375.458.875.833 1.417 1.125C70 48.542 71 49 72 49.417a30.2 30.2 0 0 1 6.417 3.041 9.7 9.7 0 0 1 3.291 3.459c.667 1.333 1 2.791.959 4.291a9.7 9.7 0 0 1-1.625 5.542 10.44 10.44 0 0 1-4.667 3.708c-2.042.875-4.542 1.334-7.542 1.334a28.7 28.7 0 0 1-5.666-.542 16.8 16.8 0 0 1-4.25-1.333c-.292-.167-.5-.459-.459-.792v-7.25c0-.125.042-.292.167-.375s.25-.042.375.042a17.8 17.8 0 0 0 5.167 2.041 19.4 19.4 0 0 0 4.916.625c1.584 0 2.709-.208 3.459-.583.666-.292 1.125-1 1.125-1.75 0-.583-.334-1.125-1-1.667-.667-.541-2.042-1.166-4.084-1.958a25.5 25.5 0 0 1-5.916-3 10.8 10.8 0 0 1-3.167-3.542 8.94 8.94 0 0 1-.958-4.25c0-1.791.5-3.5 1.416-5.041 1.042-1.667 2.584-3 4.375-3.834 1.959-1 4.417-1.458 7.375-1.458 1.709 0 3.459.125 5.167.375 1.25.167 2.458.5 3.583.958.167.042.334.209.417.375.042.167.083.334.083.5v6.792a.51.51 0 0 1-.208.417c-.375.083-.583.083-.75 0"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >04</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    GitHub
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Repository</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <g class="fill-black dark:fill-white" clip-path="url(#a)">
+                      <path
+                        d="M50 1C22.39 1 0 23.386 0 51c0 22.092 14.327 40.834 34.193 47.446 2.499.462 3.417-1.085 3.417-2.406 0-1.192-.047-5.131-.068-9.309-13.91 3.025-16.846-5.9-16.846-5.9-2.274-5.779-5.551-7.315-5.551-7.315-4.537-3.104.341-3.04.341-3.04 5.022.353 7.665 5.153 7.665 5.153 4.46 7.644 11.697 5.434 14.55 4.156.449-3.232 1.745-5.437 3.175-6.686-11.106-1.264-22.78-5.552-22.78-24.71 0-5.459 1.953-9.92 5.151-13.42-.519-1.26-2.23-6.346.485-13.233 0 0 4.198-1.344 13.753 5.125 3.988-1.108 8.266-1.663 12.515-1.682 4.25.019 8.53.574 12.526 1.682 9.544-6.469 13.736-5.125 13.736-5.125 2.722 6.887 1.01 11.973.49 13.232 3.206 3.502 5.146 7.962 5.146 13.42 0 19.205-11.697 23.434-22.83 24.671 1.793 1.552 3.391 4.595 3.391 9.26 0 6.69-.058 12.074-.058 13.721 0 1.33.9 2.89 3.435 2.399C85.692 91.819 100 73.085 100 51c0-27.614-22.386-50-50-50"
+                      />
+                      <path
+                        d="M18.727 72.227c-.11.248-.502.322-.857.152-.363-.163-.567-.502-.45-.751.109-.256.5-.327.862-.156.363.163.57.505.445.755m2.46 2.194c-.24.221-.706.118-1.022-.231-.327-.349-.388-.814-.146-1.04.246-.22.698-.117 1.026.232.327.353.39.816.14 1.04zm1.687 2.808c-.307.213-.808.013-1.118-.432-.306-.444-.306-.977.007-1.191.31-.214.804-.021 1.118.42.305.452.305.985-.008 1.203m2.853 3.252c-.274.302-.858.22-1.285-.192-.437-.403-.56-.975-.284-1.277.277-.303.864-.218 1.295.191.434.403.566.979.274 1.278m3.688 1.098c-.12.391-.683.57-1.25.403-.565-.171-.935-.63-.821-1.026.118-.394.682-.58 1.253-.401.565.17.936.625.818 1.024m4.197.465c.014.413-.466.755-1.06.762-.599.013-1.082-.32-1.088-.726 0-.416.469-.755 1.067-.765.594-.012 1.081.32 1.081.73m4.123-.158c.071.403-.342.816-.932.926-.58.106-1.118-.143-1.192-.541-.072-.413.35-.826.928-.933.592-.103 1.12.14 1.196.548"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h100v100H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >05</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Git
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Version Control</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <g clip-path="url(#a)">
+                      <path
+                        fill="#de4c36"
+                        d="M98.114 45.544 54.454 1.886a6.44 6.44 0 0 0-9.108 0l-9.066 9.066 11.5 11.501a7.65 7.65 0 0 1 7.869 1.834 7.66 7.66 0 0 1 1.817 7.916L68.55 43.287c2.682-.923 5.776-.326 7.918 1.82a7.66 7.66 0 0 1 0 10.836 7.662 7.662 0 0 1-12.508-8.335L53.623 37.271v27.202a7.663 7.663 0 0 1 2.026 12.288 7.66 7.66 0 0 1-10.836 0 7.663 7.663 0 0 1 2.508-12.51V36.795a7.6 7.6 0 0 1-2.508-1.672 7.66 7.66 0 0 1-1.651-8.377l-11.338-11.34L1.887 45.344a6.44 6.44 0 0 0 0 9.11l43.661 43.659a6.44 6.44 0 0 0 9.108 0l43.458-43.457a6.444 6.444 0 0 0 0-9.11"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h100v100H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >06</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    Laragon
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Local Web Server Environment</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain fill-black dark:fill-white group-hover:fill-[#00b4e0] transition-colors duration-500"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.843.979c-2.12-.096-3.477 1.439-3.477 1.439C2.52 2.5.791 8.429.75 8.552l-.248.74c-2.268 8.78 3.889 12.22 3.889 12.22.188.091.375-.066.375-.066.5-.31.252-.53.252-.53-1.43-1.742-1.595-5.864-1.596-5.899-.64-.532-1.248-1.318-1.111-2.342 0 0 .084-.51.584-.197 0 0 1.186.644 2.123.83-.001 0 .476.043.5.177 0 0 .374 1.752-.78 2.32.745.437 1.465.85 1.465.85.124 1.263.81 5.32.81 5.32.064.797.906.954.906.954.483.172 4.12.062 4.12.062 1.014-.044 1.062-.953 1.062-.953.015-.545.03-3.62.03-3.62.096-.575.766-.5.766-.5.703-.03.688.454.688.454-.017.515.045 3.496.045 3.496.03.858.781 1.125.781 1.125.488 0 .828-.004 1.365 0 .252.002 1.473 0 1.473 0 .55-.307 1.377-.969 1.377-.969 5.868-4.91 4.135-11.9 4.135-11.9C22.93 5.88 17.792 5.1 17.792 5.1c-.582-1.811-1.643-2.682-1.643-2.682-1.222-1.015-2.343-1.396-3.306-1.44zm5.006 4.273s1.845 3.08-1.727 7.86c.001.001-2.94 4.116-8.232 1.223 1.084.523 5.536 2.312 8.375-1.98 0 0 2.632-3.437 1.584-7.103zM6.703 8.868s1.296.036 1.341 1.82c0 0-1.02-2.668-3.271-.2 0 0 .404-1.729 1.93-1.62z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between items-center py-4 lg:py-5 border-t border-black/20 dark:border-white/20 group hover:border-black dark:hover:border-white transition-colors duration-300 cursor-pointer"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-mono text-xs text-black/40 dark:text-white/40 mb-1"
+                    >07</span
+                  >
+                  <h4
+                    class="font-serif text-xl sm:text-[22px] lg:text-2xl xxl:text-3xl text-black dark:text-white"
+                  >
+                    NPM
+                  </h4>
+                  <span
+                    class="font-serif italic text-sm md:text-[16px] text-black/60 dark:text-white/60"
+                    >Package Manager</span
+                  >
+                </div>
+                <div
+                  class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xxl:w-9 xxl:h-9 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                >
+                  <svg
+                    class="w-full h-full object-contain"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      fill="#cb3837"
+                      d="M0 28.936h100v35.25H50v5.879H27.774v-5.88H0zm5.556 29.379H16.67v-17.63h5.557v17.63h5.556v-23.5H5.556zm27.775-23.5v29.37h11.112v-5.87h11.114v-23.5zm11.112 5.879H50v11.741h-5.556zm16.67-5.88v23.5h11.113V40.686h5.556v17.63h5.557v-17.63h5.556v17.63h5.557v-23.5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
