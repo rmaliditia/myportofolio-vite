@@ -1,9 +1,7 @@
 import "./style.css";
 
 import { gsap } from "gsap/dist/gsap";
-
 import { CustomEase } from "gsap/dist/CustomEase";
-
 import { Draggable } from "gsap/dist/Draggable";
 import { Flip } from "gsap/dist/Flip";
 import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin";
@@ -11,7 +9,6 @@ import { MotionPathHelper } from "gsap/dist/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { ScrambleTextPlugin } from "gsap/dist/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-// ScrollSmoother requires ScrollTrigger
 import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { SplitText } from "gsap/dist/SplitText";
@@ -56,14 +53,8 @@ const tl = gsap.timeline({ paused: true });
 // 1. Ubah container agar bisa diklik saat menu aktif
 tl.set(menuContainer, { pointerEvents: "auto" });
 
-// 1. Ubah container agar bisa diklik saat menu aktif
-tl.set(menuContainer, { pointerEvents: "auto" });
-
 // Tambahkan baris ini: Munculkan overlay perlahan (mulai di detik ke-0)
 tl.to(overlay, { autoAlpha: 1, duration: 0.2 }, 0);
-
-// 2. Animasi Gelombang MorphSVG
-tl.to(menuPath, { morphSVG: startPath, duration: 0.4, ease: "power2.in" }).to;
 
 // 2. Animasi Gelombang MorphSVG
 tl.to(menuPath, { morphSVG: startPath, duration: 0.4, ease: "power2.in" }).to(
@@ -85,23 +76,159 @@ tl.from(
     ease: "back.out(1.5)",
   },
   "-=0.3",
-); // Dimulai sedikit sebelum ombak selesai
+);
 
-// Event Listeners
+// Event Listeners Sidebar
 btnOpen.addEventListener("click", () => {
   tl.play();
+  document.body.classList.add("overflow-hidden");
 });
 
 btnClose.addEventListener("click", () => {
   tl.reverse();
+  document.body.classList.remove("overflow-hidden");
 });
 
-// Opsional: Tutup menu otomatis jika salah satu link diklik
+// Tutup menu otomatis jika salah satu link diklik
 const links = document.querySelectorAll(".menu-item a");
 links.forEach((link) => {
-  link.addEventListener("click", () => tl.reverse());
+  link.addEventListener("click", () => {
+    tl.reverse();
+    document.body.classList.remove("overflow-hidden");
+  });
+});
+
+// Tutup menu jika area gelap (overlay) diklik
+overlay.addEventListener("click", () => {
+  tl.reverse();
+  document.body.classList.remove("overflow-hidden");
 });
 // ===== SIDEBAR CODE END =====
+
+// ===== CUSTOM CURSOR GLOBAL START =====
+document.addEventListener("DOMContentLoaded", () => {
+  const cursor = document.getElementById("custom-cursor");
+  const cursorText = document.getElementById("cursor-text");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  // Tangkap semua tombol dan link di website untuk efek hover tambahan
+  const interactables = document.querySelectorAll("a, button, input, label");
+
+  if (!cursor) return;
+
+  // Set poros kursor tepat di tengah titik
+  gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+
+  // GSAP quickTo agar animasi ngikutin mouse tidak ngelag (60fps)
+  const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
+  const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
+
+  window.addEventListener("mousemove", (e) => {
+    xTo(e.clientX);
+    yTo(e.clientY);
+  });
+
+  // 1. Interaksi saat kursor MASUK ke area Project Card (Berubah jadi VIEW)
+  projectCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(cursor, {
+        width: "6rem",
+        height: "6rem",
+        duration: 0.4,
+        ease: "back.out(1.5)",
+      });
+      gsap.to(cursorText, { opacity: 1, scale: 1, duration: 0.3, delay: 0.1 });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(cursorText, { opacity: 0, scale: 0.5, duration: 0.2 });
+      gsap.to(cursor, {
+        width: "1rem",
+        height: "1rem",
+        duration: 0.4,
+        ease: "power3.inOut",
+      });
+    });
+  });
+
+  // 2. Interaksi saat kursor MASUK ke Link / Button (Titik membesar ringan)
+  interactables.forEach((el) => {
+    if (el.closest(".project-card") || el.classList.contains("project-card"))
+      return;
+
+    el.addEventListener("mouseenter", () => {
+      gsap.to(cursor, {
+        scale: 2.5,
+        opacity: 0.5,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    });
+
+    el.addEventListener("mouseleave", () => {
+      gsap.to(cursor, {
+        scale: 1,
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    });
+  });
+}); // <--- INI ADALAH KURUNG TUTUP YANG HILANG TADI!
+// ===== CUSTOM CURSOR GLOBAL END =====
+
+// ===== ARTICLE HOVER IMAGE PREVIEW START =====
+document.addEventListener("DOMContentLoaded", () => {
+  const articleRows = gsap.utils.toArray(".article-row");
+
+  // Set titik kordinat awal gambar agar tepat berada di tengah kursor
+  gsap.set(".article-image", { yPercent: -50, xPercent: -50 });
+
+  articleRows.forEach((row) => {
+    const image = row.querySelector(".article-image");
+    // Jika diakses dari HP (gambar disembunyikan CSS), lewati animasinya
+    if (!image || window.innerWidth < 768) return;
+
+    let firstEnter;
+
+    // GSAP quickTo untuk pergerakan gambar membuntuti kursor (super smooth 60fps)
+    const setX = gsap.quickTo(image, "x", { duration: 0.4, ease: "power3" });
+    const setY = gsap.quickTo(image, "y", { duration: 0.4, ease: "power3" });
+
+    const align = (e) => {
+      if (firstEnter) {
+        setX(e.clientX, e.clientX); // Snap posisi saat pertama kali masuk (mencegah gambar terbang dari ujung)
+        setY(e.clientY, e.clientY);
+        firstEnter = false;
+      } else {
+        setX(e.clientX);
+        setY(e.clientY);
+      }
+    };
+
+    const startFollow = () => document.addEventListener("mousemove", align);
+    const stopFollow = () => document.removeEventListener("mousemove", align);
+
+    // Animasi GSAP untuk memunculkan gambar (autoAlpha membaca class opacity-0 invisible dari Tailwind)
+    const fade = gsap.to(image, {
+      autoAlpha: 1,
+      ease: "power2.out",
+      paused: true,
+      duration: 0.3,
+      onReverseComplete: stopFollow,
+    });
+
+    row.addEventListener("mouseenter", (e) => {
+      firstEnter = true;
+      fade.play();
+      startFollow();
+      align(e);
+    });
+
+    row.addEventListener("mouseleave", () => fade.reverse());
+  });
+});
+// ===== ARTICLE HOVER IMAGE PREVIEW END =====
 
 // ===========================
 //        GSAP CODE END
@@ -115,8 +242,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!themeToggle) return;
 
   // 1. Sinkronisasi awal:
-  // Jika data-theme BUKAN dark (berarti light), maka centang (Matahari).
-  // Jika dark, jangan dicentang (Bulan).
   themeToggle.checked = html.getAttribute("data-theme") !== "dark";
 
   // 2. Event saat tombol diklik
@@ -157,21 +282,3 @@ window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
 });
 // ===== NAVBAR KODE (SCROLL DOWN = HIDDEN) END =====
-
-// ===== NAVBAR KODE (EVENT LISTENERS) START =====
-btnOpen.addEventListener("click", () => {
-  tl.play();
-  // Mengunci scroll saat menu dibuka
-  document.body.classList.add("overflow-hidden");
-});
-
-btnClose.addEventListener("click", () => {
-  tl.reverse();
-  // Membuka kembali scroll saat menu ditutup
-  document.body.classList.remove("overflow-hidden");
-});
-// Tutup menu jika area gelap (overlay) diklik
-overlay.addEventListener("click", () => {
-  tl.reverse();
-  document.body.classList.remove("overflow-hidden"); // Buka kembali scroll halaman
-});
