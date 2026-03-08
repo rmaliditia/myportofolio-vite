@@ -105,78 +105,6 @@ overlay.addEventListener("click", () => {
 });
 // ===== SIDEBAR CODE END =====
 
-// ===== CUSTOM CURSOR GLOBAL START =====
-document.addEventListener("DOMContentLoaded", () => {
-  const cursor = document.getElementById("custom-cursor");
-  const cursorText = document.getElementById("cursor-text");
-  const projectCards = document.querySelectorAll(".project-card");
-
-  // Tangkap semua tombol dan link di website untuk efek hover tambahan
-  const interactables = document.querySelectorAll("a, button, input, label");
-
-  if (!cursor) return;
-
-  // Set poros kursor tepat di tengah titik
-  gsap.set(cursor, { xPercent: -50, yPercent: -50 });
-
-  // GSAP quickTo agar animasi ngikutin mouse tidak ngelag (60fps)
-  const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
-  const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
-
-  window.addEventListener("mousemove", (e) => {
-    xTo(e.clientX);
-    yTo(e.clientY);
-  });
-
-  // 1. Interaksi saat kursor MASUK ke area Project Card (Berubah jadi VIEW)
-  projectCards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      gsap.to(cursor, {
-        width: "6rem",
-        height: "6rem",
-        duration: 0.4,
-        ease: "back.out(1.5)",
-      });
-      gsap.to(cursorText, { opacity: 1, scale: 1, duration: 0.3, delay: 0.1 });
-    });
-
-    card.addEventListener("mouseleave", () => {
-      gsap.to(cursorText, { opacity: 0, scale: 0.5, duration: 0.2 });
-      gsap.to(cursor, {
-        width: "1rem",
-        height: "1rem",
-        duration: 0.4,
-        ease: "power3.inOut",
-      });
-    });
-  });
-
-  // 2. Interaksi saat kursor MASUK ke Link / Button (Titik membesar ringan)
-  interactables.forEach((el) => {
-    if (el.closest(".project-card") || el.classList.contains("project-card"))
-      return;
-
-    el.addEventListener("mouseenter", () => {
-      gsap.to(cursor, {
-        scale: 2.5,
-        opacity: 0.5,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-
-    el.addEventListener("mouseleave", () => {
-      gsap.to(cursor, {
-        scale: 1,
-        opacity: 1,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-  });
-}); // <--- INI ADALAH KURUNG TUTUP YANG HILANG TADI!
-// ===== CUSTOM CURSOR GLOBAL END =====
-
 // ===== ARTICLE HOVER IMAGE PREVIEW START =====
 document.addEventListener("DOMContentLoaded", () => {
   const articleRows = gsap.utils.toArray(".article-row");
@@ -282,3 +210,166 @@ window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
 });
 // ===== NAVBAR KODE (SCROLL DOWN = HIDDEN) END =====
+
+// ===== NAVBAR KODE (SCROLL DOWN = HIDDEN) START =====
+
+class ArrowPointer {
+  constructor() {
+    this.root = document.body;
+    this.cursor = document.querySelector(".curzr");
+
+    ((this.position = {
+      distanceX: 0,
+      distanceY: 0,
+      distance: 0,
+      pointerX: 0,
+      pointerY: 0,
+    }),
+      (this.previousPointerX = 0));
+    this.previousPointerY = 0;
+    this.angle = 0;
+    this.previousAngle = 0;
+    this.angleDisplace = 0;
+    this.degrees = 57.296;
+    this.cursorSize = 23;
+
+    this.cursorStyle = {
+      boxSizing: "border-box",
+      position: "fixed",
+      top: "0px",
+      left: `${-this.cursorSize / 2}px`,
+      zIndex: "2147483647",
+      width: `${this.cursorSize}px`,
+      height: `${this.cursorSize}px`,
+      transition: "250ms, transform 100ms",
+      userSelect: "none",
+      pointerEvents: "none",
+    };
+
+    this.init(this.cursor, this.cursorStyle);
+  }
+
+  init(el, style) {
+    Object.assign(el.style, style);
+    this.cursor.removeAttribute("hidden");
+  }
+
+  move(event) {
+    this.previousPointerX = this.position.pointerX;
+    this.previousPointerY = this.position.pointerY;
+    this.position.pointerX = event.pageX + this.root.getBoundingClientRect().x;
+    this.position.pointerY = event.pageY + this.root.getBoundingClientRect().y;
+    this.position.distanceX = this.previousPointerX - this.position.pointerX;
+    this.position.distanceY = this.previousPointerY - this.position.pointerY;
+    this.distance = Math.sqrt(
+      this.position.distanceY ** 2 + this.position.distanceX ** 2,
+    );
+
+    this.cursor.style.transform = `translate3d(${this.position.pointerX}px, ${this.position.pointerY}px, 0)`;
+
+    if (this.distance > 1) {
+      this.rotate(this.position);
+    } else {
+      this.cursor.style.transform += ` rotate(${this.angleDisplace}deg)`;
+    }
+  }
+
+  rotate(position) {
+    let unsortedAngle =
+      Math.atan(Math.abs(position.distanceY) / Math.abs(position.distanceX)) *
+      this.degrees;
+    let modAngle;
+    const style = this.cursor.style;
+    this.previousAngle = this.angle;
+
+    if (position.distanceX <= 0 && position.distanceY >= 0) {
+      this.angle = 90 - unsortedAngle + 0;
+    } else if (position.distanceX < 0 && position.distanceY < 0) {
+      this.angle = unsortedAngle + 90;
+    } else if (position.distanceX >= 0 && position.distanceY <= 0) {
+      this.angle = 90 - unsortedAngle + 180;
+    } else if (position.distanceX > 0 && position.distanceY > 0) {
+      this.angle = unsortedAngle + 270;
+    }
+
+    if (isNaN(this.angle)) {
+      this.angle = this.previousAngle;
+    } else {
+      if (this.angle - this.previousAngle <= -270) {
+        this.angleDisplace += 360 + this.angle - this.previousAngle;
+      } else if (this.angle - this.previousAngle >= 270) {
+        this.angleDisplace += this.angle - this.previousAngle - 360;
+      } else {
+        this.angleDisplace += this.angle - this.previousAngle;
+      }
+    }
+    style.transform += ` rotate(${this.angleDisplace}deg)`;
+
+    setTimeout(() => {
+      modAngle =
+        this.angleDisplace >= 0
+          ? this.angleDisplace % 360
+          : 360 + (this.angleDisplace % 360);
+      if (modAngle >= 45 && modAngle < 135) {
+        style.left = `${-this.cursorSize}px`;
+        style.top = `${-this.cursorSize / 2}px`;
+      } else if (modAngle >= 135 && modAngle < 225) {
+        style.left = `${-this.cursorSize / 2}px`;
+        style.top = `${-this.cursorSize}px`;
+      } else if (modAngle >= 225 && modAngle < 315) {
+        style.left = "0px";
+        style.top = `${-this.cursorSize / 2}px`;
+      } else {
+        style.left = `${-this.cursorSize / 2}px`;
+        style.top = "0px";
+      }
+    }, 0);
+  }
+
+  remove() {
+    this.cursor.remove();
+  }
+}
+
+(() => {
+  const cursor = new ArrowPointer();
+  if (
+    !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    )
+  ) {
+    document.onmousemove = function (event) {
+      cursor.move(event);
+    };
+  } else {
+    cursor.remove();
+  }
+})();
+// ===== NAVBAR KODE (SCROLL DOWN = HIDDEN) END =====
+
+// ===== REVEAL FOOTER EFFECT START =====
+document.addEventListener("DOMContentLoaded", () => {
+  function initSiteFooter() {
+    const siteContent = document.getElementById("site-content");
+    const siteFooter = document.getElementById("site-footer");
+
+    if (!siteContent || !siteFooter) return;
+
+    // Ambil tinggi dinamis dari Footer
+    const siteFooterHeight = siteFooter.offsetHeight;
+
+    // Berikan ruang kosong di paling bawah konten utama (margin-bottom)
+    // agar footer yang melayang di belakangnya bisa terlihat saat di-scroll mentok
+    siteContent.style.marginBottom = `${siteFooterHeight}px`;
+  }
+
+  // Jalankan saat load awal
+  initSiteFooter();
+
+  // PENTING: Kalkulasi ulang tinggi footer jika user mengubah ukuran window browser (responsive)
+  window.addEventListener("resize", initSiteFooter);
+
+  // Ekstra safety: kalkulasi ulang setelah semua gambar termuat
+  window.addEventListener("load", initSiteFooter);
+});
+// ===== REVEAL FOOTER EFFECT END =====
