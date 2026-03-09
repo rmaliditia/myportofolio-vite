@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Projects | Reiza</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    </script>
+  </head>
+
+  <body
+    class="h-fit w-full text-[#1a1a1a] dark:text-[#f9fafb] transition-colors duration-500 font-serif"
+  >
+    <main
+      id="site-content"
+      class="relative z-10 bg-[#f9fafb] dark:bg-[#1a1a1a] shadow-[0_20px_60px_rgba(0,0,0,0.8)] transition-colors duration-500 min-h-screen flex flex-col"
+    >
+      <nav
+        class="w-full flex justify-between items-center px-7 sm:px-10 lg:px-14 xl:px-22 py-6 lg:py-10"
+      >
+        <a
+          href="index.html"
+          class="group flex items-center gap-2 font-mono text-xs sm:text-sm tracking-widest uppercase hover:opacity-50 transition-opacity"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform duration-300 group-hover:-translate-x-1"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+          <span>Back to Home</span>
+        </a>
+
+        <label
+          class="swap swap-rotate hover:opacity-50 transition-opacity duration-500 cursor-pointer"
+        >
+          <input type="checkbox" id="theme-toggle" class="theme-controller" />
+          <svg
+            class="swap-off h-5 w-5 sm:h-6 sm:w-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+            />
+          </svg>
+          <svg
+            class="swap-on h-5 w-5 sm:h-6 sm:w-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+            />
+          </svg>
+        </label>
+      </nav>
+
+      <section
+        class="mx-auto w-full pt-10 lg:pt-16 flex flex-col max-w-384 gap-10 px-7 sm:px-10 lg:px-14 xl:px-22"
+      >
+        <div class="flex flex-col gap-4 max-w-4xl">
+          <h1
+            class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] font-medium leading-none"
+          >
+            Complete <br /><span
+              class="italic text-[#1a1a1a]/60 dark:text-[#f9fafb]/60"
+              >Archive.</span
+            >
+          </h1>
+          <p
+            class="font-sans text-sm sm:text-base lg:text-lg text-[#1a1a1a]/70 dark:text-[#f9fafb]/70 max-w-2xl mt-4"
+          >
+            A comprehensive collection of my digital works, spanning from
+            full-stack web applications to branding and visual identity designs.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-wrap items-center gap-6 mt-6 border-b border-[#1a1a1a]/20 dark:border-[#f9fafb]/20 pb-6"
+        >
+          <span class="font-mono text-xs font-bold tracking-widest uppercase"
+            >Filter by:</span
+          >
+          <button
+            class="font-mono text-xs tracking-widest uppercase opacity-50 hover:opacity-100 transition-opacity"
+          >
+            All
+          </button>
+          <button
+            class="font-mono text-xs tracking-widest uppercase opacity-50 hover:opacity-100 transition-opacity"
+          >
+            Development
+          </button>
+          <button
+            class="font-mono text-xs tracking-widest uppercase opacity-50 hover:opacity-100 transition-opacity"
+          >
+            Design
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="mx-auto w-full py-12 lg:py-20 flex flex-col max-w-384 px-7 sm:px-10 lg:px-14 xl:px-22 mb-20"
+      >
+        <h1
+          class="font-serif text-center text-2xl sm:text-3xl lg:text-4xl font-medium leading-none"
+        >
+          Something Great is Brewing.
+        </h1>
+      </section>
+
+      <div class="curzr" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path
+            class="inner"
+            d="M25,30a5.82,5.82,0,0,1-1.09-.17l-.2-.07-7.36-3.48a.72.72,0,0,0-.35-.08.78.78,0,0,0-.33.07L8.24,29.54a.66.66,0,0,1-.2.06,5.17,5.17,0,0,1-1,.15,3.6,3.6,0,0,1-3.29-5L12.68,4.2a3.59,3.59,0,0,1,6.58,0l9,20.74A3.6,3.6,0,0,1,25,30Z"
+            fill="#F9FAFB"
+          />
+          <path
+            class="outer"
+            d="M16,3A2.59,2.59,0,0,1,18.34,4.6l9,20.74A2.59,2.59,0,0,1,25,29a5.42,5.42,0,0,1-.86-.15l-7.37-3.48a1.84,1.84,0,0,0-.77-.17,1.69,1.69,0,0,0-.73.16l-7.4,3.31a5.89,5.89,0,0,1-.79.12,2.59,2.59,0,0,1-2.37-3.62L13.6,4.6A2.58,2.58,0,0,1,16,3m0-2h0A4.58,4.58,0,0,0,11.76,3.8L2.84,24.33A4.58,4.58,0,0,0,7,30.75a6.08,6.08,0,0,0,1.21-.17,1.87,1.87,0,0,0,.4-.13L16,27.18l7.29,3.44a1.64,1.64,0,0,0,.39.14A6.37,6.37,0,0,0,25,31a4.59,4.59,0,0,0,4.21-6.41l-9-20.75A4.62,4.62,0,0,0,16,1Z"
+            fill="#1A1A1A"
+          />
+        </svg>
+      </div>
+
+      <div
+        id="project-cursor"
+        class="fixed top-0 left-0 w-20 h-20 sm:w-24 sm:h-24 bg-[#1a1a1a]/80 backdrop-blur-sm border border-white/20 rounded-full pointer-events-none z-[110] hidden md:flex items-center justify-center text-white scale-0 opacity-0 shadow-xl"
+      >
+        <span
+          class="font-sans text-sm font-medium tracking-wide flex items-center gap-1"
+        >
+          View
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M7 17l9.2-9.2M17 17V7H7" />
+          </svg>
+        </span>
+      </div>
+    </main>
+
+    <footer
+      id="site-footer"
+      class="fixed bottom-0 left-0 h-screen w-full z-0 overflow-hidden bg-[#1a1a1a] rounded-t-[2rem] lg:rounded-t-[4rem]"
+    >
+      <img
+        src="/img/duduk.svg"
+        alt="Reiza"
+        class="absolute inset-0 w-full h-full object-cover object-[70%_center] z-0"
+      />
+      <div
+        class="absolute inset-0 bg-[#1a1a1a]/40 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/60 to-transparent z-10"
+      ></div>
+
+      <div
+        class="relative z-20 flex flex-col justify-between w-full h-full min-h-[500px] md:min-h-[550px] lg:min-h-[600px] p-8 sm:p-12 md:p-16 lg:p-20 xl:p-28"
+      >
+        <div class="flex flex-col gap-2 max-w-3xl">
+          <h2
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-sans font-bold text-[#f9fafb] uppercase tracking-tight leading-none mb-1 md:mb-2"
+          >
+            Ready to Collaborate
+          </h2>
+          <p
+            class="font-sans font-light text-sm md:text-base lg:text-lg text-[#f9fafb]/80 mt-2"
+          >
+            Bandung, West Java — ID
+          </p>
+          <a
+            href="mailto:aliditia123@gmail.com"
+            class="font-sans font-light text-sm md:text-base lg:text-lg text-[#f9fafb] hover:text-[#f9fafb]/60 transition-colors w-fit mt-1"
+            >aliditia123@gmail.com</a
+          >
+        </div>
+
+        <div class="flex flex-col gap-10 mt-20 md:mt-28 lg:mt-32">
+          <div class="grid grid-cols-2 lg:flex lg:flex-row gap-10 lg:gap-24">
+            <div class="flex flex-col gap-4">
+              <span
+                class="font-mono text-[10px] md:text-xs text-[#f9fafb]/60 tracking-widest italic uppercase"
+                >// Menu</span
+              >
+              <ul
+                class="flex flex-col lg:flex-row flex-wrap gap-3 lg:gap-5 font-sans font-light text-sm md:text-base lg:text-lg text-[#f9fafb] italic"
+              >
+                <li>
+                  <a
+                    href="index.html#home"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li class="hidden lg:block text-[#f9fafb]/30">/</li>
+                <li>
+                  <a
+                    href="index.html#about"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li class="hidden lg:block text-[#f9fafb]/30">/</li>
+                <li>
+                  <a
+                    href="index.html#projects"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >Projects</a
+                  >
+                </li>
+                <li class="hidden lg:block text-[#f9fafb]/30">/</li>
+                <li>
+                  <a
+                    href="index.html#contact"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-4">
+              <span
+                class="font-mono text-[10px] md:text-xs text-[#f9fafb]/60 tracking-widest italic uppercase"
+                >// Socials</span
+              >
+              <ul
+                class="flex flex-col lg:flex-row gap-3 lg:gap-5 font-sans font-light text-sm md:text-base lg:text-lg text-[#f9fafb] italic"
+              >
+                <li>
+                  <a
+                    href="https://www.instagram.com/rmaliditia_/"
+                    target="_blank"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="hidden lg:block text-[#f9fafb]/30">/</li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@grafizaly"
+                    target="_blank"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >Tiktok</a
+                  >
+                </li>
+                <li class="hidden lg:block text-[#f9fafb]/30">/</li>
+                <li>
+                  <a
+                    href="https://github.com/rmaliditia"
+                    target="_blank"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >Github</a
+                  >
+                </li>
+                <li class="hidden lg:block text-[#f9fafb]/30">/</li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/reiza-mohamad-aliditia"
+                    target="_blank"
+                    class="hover:text-[#f9fafb]/60 transition-colors"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="text-[10px] md:text-xs font-sans font-light text-[#f9fafb]/50 mt-4 lg:mt-auto"
+          >
+            © 2026 rmaliditia.dev
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -211,7 +211,7 @@ window.addEventListener("scroll", () => {
 });
 // ===== NAVBAR KODE (SCROLL DOWN = HIDDEN) END =====
 
-// ===== NAVBAR KODE (SCROLL DOWN = HIDDEN) START =====
+// ===== CUSTOM CURSOR START =====
 
 class ArrowPointer {
   constructor() {
@@ -345,7 +345,7 @@ class ArrowPointer {
     cursor.remove();
   }
 })();
-// ===== NAVBAR KODE (SCROLL DOWN = HIDDEN) END =====
+// ===== CUSTOM CURSOR END =====
 
 // ===== REVEAL FOOTER EFFECT START =====
 document.addEventListener("DOMContentLoaded", () => {
